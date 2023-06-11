@@ -19,6 +19,7 @@
 
 /* common */
 html{
+    scroll-behavior: smooth;
     font-family: Arial, Helvetica, sans-serif;
 }
 .clear{
@@ -42,6 +43,7 @@ html{
     display: inline-block;
     border: none;
     cursor: pointer;
+    text-align: center;
 }
 .button:hover{
     color: black;
@@ -56,6 +58,7 @@ html{
 .row{
     margin-left: -8px;
     margin-right: -8px;
+    
 }
 .row::after{
     content:"";
@@ -143,13 +146,20 @@ html{
 #nav .arrow-down-button{
     font-size: 14px;
 }
-#header .search-button{
+#header .mobile-menu-btn{
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+#header .search-button,
+#header .mobile-menu-btn{
     float: right;
     padding: 0 21px;
-
 }
+#header .menu-icon,
 #header .search-icon{
-    color:#ccc;
+    color:#fff;
     line-height: 46.5px;
     font-size: 20px;
     
@@ -158,12 +168,18 @@ html{
     cursor: pointer;
     background-color: red;
 }
+#header .mobile-menu-btn:hover{
+    background-color: #ccc;
+}
+#header .mobile-menu-btn:hover .menu-icon{
+    color: black;
+} 
     /* CSS slider */
 #slider{
     position: relative;
     margin-top: 46.5px;
     padding-top: 50%;
-    background: url('/assets/img/slider/slider1.jpg') top center /cover no-repeat;
+    background: url('../img/slider/slider1.jpg') top center /cover no-repeat;
 }
 #slider .slider-content{
     position:absolute;
@@ -196,8 +212,12 @@ html{
         /* about section */
 #content .content-section{
     width: 800px;
+    max-width: 100%;
     margin:auto;
-    padding: 64px 0;
+    padding-top: 64px;
+    padding-bottom: 64px;
+    padding-left: 16px;
+    padding-right: 16px;
 }
 #content .heading-section{
     font-size: 30px;
@@ -215,7 +235,7 @@ html{
 }
 #content .about-text{
     font-size: 15px;
-    margin: 15px 0;
+    padding: 15px 0;
     text-align: justify;
     line-height: 1.4;
 }
@@ -267,7 +287,7 @@ html{
 }
 
 .place-list{
-    margin-top: 32px;
+    margin-top: 16px;
     margin-bottom: 48px;
 }
 
@@ -303,11 +323,10 @@ html{
 }
 .contact-infor{
     font-size: 18px;
-    margin-bottom: 16px;
+    margin-bottom: 8px;
 }
 .contact-infor .infor{
     list-style: none;
-    margin-bottom: 16px;
 }
 .infor li{
     line-height: 1.5;
@@ -315,6 +334,13 @@ html{
 .infor i[class*="ti-"] {
     width: 30px;
     display: inline-block;
+}
+.infor a{
+    color: #1800ef;
+    opacity: 0.8;
+}
+.infor a:hover{
+    opacity: 1;
 }
 .contact-form{
     font-size: 15px;
