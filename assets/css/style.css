@@ -204,6 +204,7 @@ html{
     margin-top: 25px;
     font-weight: bold;
     font-size: 15px;
+    text-shadow: 0 0 1px black;
 }
     /* CSS content */
 #content{
@@ -481,3 +482,4 @@ html{
     color: #2196F3;
     cursor: pointer ;
 }
+
